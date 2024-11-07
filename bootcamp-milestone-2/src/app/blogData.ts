@@ -25,7 +25,7 @@ const blogs: Blog[] = [
     },
     {
         title: "UFO Data",
-        date: "10/21/29",
+        date: "10/21/24",
         description: "This is the final blog",
         image: "/ufo.png",
         imageAlt: "description of last image",
