@@ -24,3 +24,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     opacity: 100%;
   }
+
+  .text{
+    padding:10px;
+  }
+
+  .date{
+    text-align: right;
+    padding: 2px;
+  }
