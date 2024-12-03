@@ -3,6 +3,7 @@ import style from './blogPreview.module.css'
 import type { IBlog } from '@/database/blogSchema';
 import Image from 'next/image';
 import Link from 'next/link';
+import Blog from '@/app/blogs/[slug]/page';
 
 export default function BlogPreview(props: IBlog) {
   const date: String[] = props.date.toString().split(" ");

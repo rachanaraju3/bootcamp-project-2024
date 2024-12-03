@@ -28,7 +28,7 @@ const blogSchema = new Schema<IBlog>({
         imageAlt: {type: String, required: true},
         slug: { type: String, required: true },
         content: { type: String, required: true },
-        comments: {type: [String], required: false, default: []}
+        comments: {},
 })
 
 // defining the collection and model
