@@ -5,7 +5,7 @@ import CommentSection from '@/components/commentSection';
 
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }
 
 async function getBlog(slug: string) {
@@ -29,9 +29,8 @@ async function getBlog(slug: string) {
 	}
 }
 
-export default async function Blog(props: Props) {
+export default async function Blog({params}: Props) {
 	// now we can access slug
-	const {params} = await props;
 	const {slug} = await params;
 	const blog = await getBlog(slug);
     console.log(blog)
