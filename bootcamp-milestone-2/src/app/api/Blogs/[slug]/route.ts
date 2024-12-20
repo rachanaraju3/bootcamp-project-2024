@@ -7,11 +7,12 @@ import blogSchema from "@/database/blogSchema"
 export async function GET(req: NextRequest){
     await connectDB() // function from db.ts before
 		const slug = req.url.split('/').slice(-1)[0] // another destructure
-
+		console.log(slug)
 	   try {
-	        const blog = await blogSchema.findOne({ slug }).orFail()
+	        const blog = await blogSchema.findOne({slug}).orFail()
 	        return NextResponse.json(blog)
 	    } catch (err) {
+			console.log(slug)
 			console.log(err)
 	        return NextResponse.json('Blog not found.', { status: 404 })
 	    }
