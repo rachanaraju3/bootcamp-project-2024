@@ -10,8 +10,14 @@ export type IProject = {
     details: string;
 	link: string; 
     date: Date;
+	comments: IComment[];
 };
 
+type IComment = {
+    user: string,
+    comment: string;
+    date: Date;
+}
 
 // mongoose schema 
 const projectSchema = new Schema<IProject>({
@@ -20,7 +26,8 @@ const projectSchema = new Schema<IProject>({
 	imageAlt: { type: String, required: true},
 	details: { type: String, required: true },
 	link: { type: String, required: true },
-    date: {type: Date, required: false, default: new Date()}
+    date: {type: Date, required: false, default: new Date()},
+	comments: {},
 })
 
 // defining the collection and model

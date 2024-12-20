@@ -1,6 +1,7 @@
 import style from '../blogs.module.css'
 import Image from 'next/image';
 import Comment, {IComment} from '@/components/comment';
+import CommentSection from '@/components/commentSection';
 
 
 type Props = {
@@ -28,8 +29,9 @@ async function getBlog(slug: string) {
 	}
 }
 
-export default async function Blog({ params: {slug} }: Props) {
+export default async function Blog({ params }: Props) {
 	// now we can access slug
+	const {slug} = await params;
 	var blog = await getBlog(slug);
     console.log(blog)
 	if (blog == null){
@@ -49,6 +51,7 @@ export default async function Blog({ params: {slug} }: Props) {
             <h5 className={style.h5}>Comments</h5>
                 {blog.comments.map((comment: IComment, index: number) => (
 	                <Comment key={index} comment={comment} />))}
+				<CommentSection slug={slug} type="blog"/>
         </div>
         
     </div>

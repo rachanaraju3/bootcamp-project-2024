@@ -1,20 +1,12 @@
-.main {
-    padding: 0 20px 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.comments {
+    padding: 20px;
+    min-width: 300px;
   }
 
-  .pageTitle{
-    font-size: 40px;
-    color: rgb(108, 6, 181);
-  }
 
   .label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
     color: rgb(129, 0, 221);
   }
   
@@ -23,7 +15,7 @@
     padding: 10px;
     margin-bottom: 15px;
     background-color: #efd1e4;
-    border: 1px solid #ccc;
+    border: 1px solid #615d5d;
     border-radius: 4px;
     font-size: 16px;
     resize: none;
@@ -31,15 +23,20 @@
   
   .submit {
     background-color: #efd1e4;
-    border: 2px solid #ccc;
+    border: 2px solid rgb(169, 58, 248);
     border-radius: 4px;
+    padding: auto;
   }
   /* Add some spacing to the form */
   .form {
     width: 500px;
-    margin: 0 auto;
+    margin: auto;
   }
-
   .status{
     font-size: 20px;
+  }
+
+  .h6{
+    font-size: 20px;
+    color: rgb(108, 6, 181);
   }

@@ -85,3 +85,22 @@
     .projectLink{
         text-decoration: underline;
     }
+
+    .projectComments{
+      display: flex;
+      width: 30%;
+      height: 400px;
+      flex-shrink: 1;
+      margin: 20px;
+      line-height: 1.5;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .commentHead{
+      font-weight: 400;
+      font-size: 25px;
+      color: rgb(142, 35, 218);
+    }
