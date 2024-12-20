@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 import style from "./resume.module.css";
 import Link from "next/link";
 
@@ -25,7 +24,7 @@ export default function Resume(){
                             <div className="entry">
                                 <h3 className={style.entryTitle}>Student Researcher | Quantum Mechanics and Applications to Nanotechnology @ UC Davis | July 2022</h3>
                                 <p className="entry-description">One of 20 students selected to study Quantum Mechanics and Applications to Nanotechnology in July 2022.</p>
-                                <p>Applied elements of programming in C to write programs that demonstrate an electron's location as a probability of being at a range of positions</p>
+                                <p>Applied elements of programming in C to write programs that demonstrate an electron&apos;s location as a probability of being at a range of positions</p>
                                 <p>Constructed scanning tunneling microscope (STM) with a group of 3 other students</p>
                                 <p>Utilized C to control STM in real time</p>
                             </div>

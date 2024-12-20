@@ -3,11 +3,10 @@ import style from './blogPreview.module.css'
 import type { IBlog } from '@/database/blogSchema';
 import Image from 'next/image';
 import Link from 'next/link';
-import Blog from '@/app/blogs/[slug]/page';
 
 export default function BlogPreview(props: IBlog) {
-  const date: String[] = props.date.toString().split(" ");
-  const dateFormat: String = date[1] + " " + date[2] + ", " + date[3];
+  const date: string[] = props.date.toString().split(" ");
+  const dateFormat: string = date[1] + " " + date[2] + ", " + date[3];
   return (
 		// replace everything between the <div> & </div> tags
 		// with your code from earlier milestones

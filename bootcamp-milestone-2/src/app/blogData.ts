@@ -1,6 +1,5 @@
 import connectDB from "@/database/db";
 import Blog from "@/database/blogSchema";
-import type iBlog from "@/database/blogSchema";
 
 // export type Blog = {
 //     title: string;
@@ -46,9 +45,10 @@ async function getBlogs(){
 			// send a response as the blogs as the message
 	    return blogs
 	} catch (err) {
+		console.log(err)
 	    return null
 	}
 }
 
-var blogs = getBlogs();
+const blogs = getBlogs();
 export default blogs;

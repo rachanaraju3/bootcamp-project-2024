@@ -22,8 +22,8 @@ function parseCommentTime(time: Date){
 	/*
 		Implementation up to you...
 	*/
-    const date: String[] = time.toString().split("-");
-    const dateFormat: String = date[1] + "/" + date[2].slice(0,2) + "/" + date[0];
+    const date: string[] = time.toString().split("-");
+    const dateFormat: string = date[1] + "/" + date[2].slice(0,2) + "/" + date[0];
     return dateFormat
 }
 

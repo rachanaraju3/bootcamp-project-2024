@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import blogs from "../blogData";
 import type { IBlog } from "@/database/blogSchema";
 import BlogPreview from "@/components/blogPreview";
@@ -11,7 +10,7 @@ export default async function Blog(){
             <div className={style.main}>
                 <h1 className={style.pageTitle}>Blogs</h1>
                 {(await blogs)?.map((blog) => blog._doc).map((blog: IBlog) => 
-            <BlogPreview {...blog}/>)}
+                    <BlogPreview {...blog} key={blog.slug}/>)}
             </div>
             
         )

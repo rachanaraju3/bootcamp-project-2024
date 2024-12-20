@@ -6,9 +6,9 @@ import Comment, { IComment } from "./comment";
 import CommentSection from "./commentSection";
 
 export default function ProjectPreview(props: IProject){
-    const details: String[] = props.details.split(". ")
+    const details: string[] = props.details.split(". ")
 
-    function formatDetails(detail: String){
+    function formatDetails(detail: string){
         return <p className={style.projectDetailsText}>{detail.trim() + "."}</p>
     }
 

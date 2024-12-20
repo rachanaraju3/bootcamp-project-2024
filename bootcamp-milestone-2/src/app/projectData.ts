@@ -1,4 +1,3 @@
-import type IProject from "@/database/projectSchema"
 import connectDB from "@/database/db"
 import Project from "@/database/projectSchema"
 
@@ -13,9 +12,10 @@ async function getProjects(){
 			// send a response as the blogs as the message
 	    return projects
 	} catch (err) {
+		console.log(err)
 	    return null
 	}
 }
 
-var projects = getProjects();
+const projects = getProjects();
 export default projects;

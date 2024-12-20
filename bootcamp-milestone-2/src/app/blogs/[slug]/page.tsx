@@ -32,14 +32,14 @@ async function getBlog(slug: string) {
 export default async function Blog({ params }: Props) {
 	// now we can access slug
 	const {slug} = await params;
-	var blog = await getBlog(slug);
+	const blog = await getBlog(slug);
     console.log(blog)
 	if (blog == null){
         return <div>Blog not found</div>
     }
 
-    const date: String[] = blog.date.toString().split("-");
-    const dateFormat: String = date[1] + "/" + date[2].slice(0,2) + "/" + date[0];
+    const date: string[] = blog.date.toString().split("-");
+    const dateFormat: string = date[1] + "/" + date[2].slice(0,2) + "/" + date[0];
     console.log(blog.comments)
     return (
         <div className={style.main}>

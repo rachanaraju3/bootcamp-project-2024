@@ -10,7 +10,7 @@ export default async function Portfolio(){
                 <h1 className={style.pageTitle}>Portfolio</h1>
                 <div className={style.projectLayout}>
                     {(await projects)?.map((project) => project._doc).map((project: IProject) => 
-                <ProjectPreview {...project}/>)}
+                <ProjectPreview {...project} key={project.title}/>)}
                 </div>
             </div>
             
