@@ -8,8 +8,8 @@ import CommentSection from "./commentSection";
 export default function ProjectPreview(props: IProject){
     const details: string[] = props.details.split(". ")
 
-    function formatDetails(detail: string){
-        return <p className={style.projectDetailsText}>{detail.trim() + "."}</p>
+    function formatDetails(detail: string, index: number){
+        return <p className={style.projectDetailsText} key={index}>{detail.trim() + "."}</p>
     }
 
     function displayComments(){
@@ -36,7 +36,7 @@ export default function ProjectPreview(props: IProject){
                 <div className={style.projectDetails}>
                     <h2 className={style.projectName}>{props.title}</h2>
                     <div>
-                        {details.map((detail) => formatDetails(detail))}
+                        {details.map((detail, index) => formatDetails(detail, index))}
                     </div>
                     <Link href={props.link} className={style.projectLink}>Learn More</Link>
                 </div>

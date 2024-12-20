@@ -1,4 +1,4 @@
-import mongoose, { Date, Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
 export type IBlog = {
