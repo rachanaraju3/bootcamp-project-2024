@@ -29,8 +29,9 @@ async function getBlog(slug: string) {
 	}
 }
 
-export default async function Blog({ params }: Props) {
+export default async function Blog(props: Props) {
 	// now we can access slug
+	const {params} = await props;
 	const {slug} = await params;
 	const blog = await getBlog(slug);
     console.log(blog)
