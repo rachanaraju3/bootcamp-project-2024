@@ -13,6 +13,7 @@
 
   .projectLayout {
     align-items: center;
+    height: min-content;
     
   } 
     

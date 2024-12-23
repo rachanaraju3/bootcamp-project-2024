@@ -1,5 +1,6 @@
 .projectLayout {
     align-items: center;
+    height: min-content;
     
 } 
     
@@ -12,6 +13,7 @@
       border: 2px solid #ccc;
       border-radius: 5px;
       width: auto;
+      height: min-content;
     
       /* Debug border */
       /* border: 2px solid blue; */
@@ -89,7 +91,7 @@
     .projectComments{
       display: flex;
       width: 30%;
-      height: 400px;
+      height: auto;
       flex-shrink: 1;
       margin: 20px;
       line-height: 1.5;

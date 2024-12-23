@@ -12,8 +12,8 @@ export default function ProjectPreview(props: IProject){
         return <p className={style.projectDetailsText} key={index}>{detail.trim() + "."}</p>
     }
 
-    function displayComments(){
-        if (props.comments.length == 0){
+    function displayComments(comments: IComment[]){
+        if (comments.length == 0){
             return(
                 <div className={style.projectDetailsText}>
                     No comments right now.
@@ -21,10 +21,11 @@ export default function ProjectPreview(props: IProject){
             )
         }
         return (
-            props.comments.map((comment: IComment, index: number) => (
+            comments.map((comment: IComment, index: number) => (
                 <Comment key={index} comment={comment} />)))
     }
     
+
     return (
         <div className={style.projectLayout}>
             <div className={style.project}>
@@ -42,7 +43,7 @@ export default function ProjectPreview(props: IProject){
                 </div>
                 <div className={style.projectComments}>
                     <h4 className={style.commentHead}>Comments</h4>
-                    {displayComments()}
+                    {displayComments(props.comments)}
                     <CommentSection slug={props.title} type="project"/>
                 </div>
             </div> 
