@@ -4,8 +4,6 @@ import style from './projectPreview.module.css';
 import Link from "next/link";
 import Image from "next/image";
 import Comment, { IComment } from "./comment";
-import CommentSection from "./commentSection";
-import Project from "@/database/projectSchema";
 import ProjectComment from "./projectComment";
 import React, {useState, useEffect} from "react";
 
@@ -19,18 +17,18 @@ interface projectProp {
         return <p className={style.projectDetailsText} key={index}>{detail.trim() + "."}</p>
     }
 
-    function displayComments(comments: IComment[]){
-        if (comments.length == 0){
-            return(
-                <div className={style.projectDetailsText}>
-                    No comments right now.
-                </div>
-            )
-        }
-        return (
-            comments.map((comment: IComment, index: number) => (
-                <Comment key={index} comment={comment} />)))
-    }
+    // function displayComments(comments: IComment[]){
+    //     if (comments.length == 0){
+    //         return(
+    //             <div className={style.projectDetailsText}>
+    //                 No comments right now.
+    //             </div>
+    //         )
+    //     }
+    //     return (
+    //         comments.map((comment: IComment, index: number) => (
+    //             <Comment key={index} comment={comment} />)))
+    // }
 
 export default function ProjectPreview(title: projectProp){
     //const [comments, setComments] = useState([])
@@ -53,7 +51,7 @@ export default function ProjectPreview(title: projectProp){
             setProject(proj);
         } catch (err: unknown) {
             console.log(`error: ${err}`);
-            return null;
+            //return null;
             // `` are a special way of allowing JS inside a string
             // Instead of "error: " + err, we can just do the above
             // it is simular to formated strings in python --> f"{err}"
@@ -108,7 +106,7 @@ export default function ProjectPreview(title: projectProp){
 
     if (project == null){
         return (
-            <div>Project doesn't exist</div>
+            <div>Project doesn&apos;'t exist</div>
         )
     }
 

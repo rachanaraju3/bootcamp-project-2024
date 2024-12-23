@@ -4,10 +4,10 @@ import React, {useState} from "react";
 
 type Props = {
    slug: string,
-   onSubmit: Function
+   onSubmit: () => void
 }
 
-export default function projectComment(props: Props){
+export default function ProjectComment(props: Props){
     
     const slug = props.slug
     const onSubmit = props.onSubmit

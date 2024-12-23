@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from '@/database/db'
-import Project from '@/database/projectSchema'
 import projectSchema from '@/database/projectSchema'
 
 

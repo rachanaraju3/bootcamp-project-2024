@@ -1,8 +1,7 @@
 import style from './portfolio.module.css';
-import { IProject } from '@/database/projectSchema';
 import projects from '../projectData';
 import ProjectPreview from '@/components/projectPreview';
-import React, {useState} from "react";
+import React from "react";
 
 export default async function Portfolio(){
     //const [project,setProjects] = useState(projects)
