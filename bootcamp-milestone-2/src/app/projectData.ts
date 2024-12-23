@@ -17,5 +17,5 @@ async function getProjects(){
 	}
 }
 
-const projects = getProjects();
+const projects = await getProjects();
 export default projects;
