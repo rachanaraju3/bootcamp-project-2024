@@ -58,7 +58,7 @@ export default function ProjectPreview(title: projectProp){
         }
     }
     
-    useEffect(() => {getProject(name)}, [title])
+    useEffect(() => {getProject(name)}, [name])
     //await getProject(name)
     
     console.log("title",name)
@@ -106,7 +106,7 @@ export default function ProjectPreview(title: projectProp){
 
     if (project == null){
         return (
-            <div>Project doesn&apos;'t exist</div>
+            <div>Project doesn&apos;t exist</div>
         )
     }
 
